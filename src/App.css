@@ -1,0 +1,21 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .owl-carousel {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .owl-banner .item {
+    text-align: left;
+  }
+  

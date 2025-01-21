@@ -1,0 +1,31 @@
+.portfolio {
+    padding: 50px 0;
+    background: #ffffff;
+  }
+  
+  .portfolio h2 {
+    font-size: 32px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .portfolio .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .portfolio .gallery img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .portfolio .gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
