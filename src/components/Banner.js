@@ -6,7 +6,7 @@ const Banner = () => {
   // const phoneNumber = "8126816455";
 
   return (
-    <section className="banner">
+    <section id="home" className="banner">
       <div className="banner__content">
         <p className="banner__subtitle">Website Designing</p>
         <h1 className="banner__title">

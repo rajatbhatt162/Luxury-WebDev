@@ -28,7 +28,7 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="portfolio">
+    <div id="portfolio" className="portfolio">
       <h2>
         Our Recent <span>Projects</span> & Case Studies <span>For Clients</span>
       </h2>
