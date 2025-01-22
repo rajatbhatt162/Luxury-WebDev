@@ -1,88 +1,86 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/Services.css";
 
 const Services = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const services = [
+    {
+      icon: "/images/icons/rocket.png",
+      alt: "Rocket Icon",
+      title: "Web Designing Service At Affordable Prices",
+      description:
+        "We make websites that fit your needs, helping your business grow online with the latest technologies.",
+    },
+    {
+      icon: "/images/icons/creative.png",
+      alt: "Content Icon",
+      title: "Content Creation & Strategy",
+      description:
+        "Our expert team designs engaging and SEO-optimized content to boost your web presence and online reach.",
+    },
+    {
+      icon: "/images/icons/speedometer.png",
+      alt: "Speed Icon",
+      title: "Website Speed Optimization",
+      description:
+        "We focus on optimizing your website's performance to ensure a fast, smooth user experience across all devices.",
+    },
+    {
+      icon: "/images/icons/rocket.png",
+      alt: "Rocket Icon",
+      title: "Responsive Web Design",
+      description:
+        "Our responsive web design services ensure that your website looks great and functions seamlessly on all devices.",
+    },
+    {
+      icon: "/images/icons/creative.png",
+      alt: "Content Icon",
+      title: "Social Media Management",
+      description:
+        "We manage your social media presence, crafting engaging posts, and strategies to increase audience interaction and growth.",
+    },
+    {
+      icon: "/images/icons/creative.png",
+      alt: "Speed Icon",
+      title: "SEO & Speed Optimization",
+      description:
+        "Our team enhances your site's SEO ranking and optimizes its speed to ensure maximum visibility and user satisfaction.",
+    },
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % services.length);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, [services.length]);
+
+  const visibleServices = [
+    services[currentSlide],
+    services[(currentSlide + 1) % services.length],
+    services[(currentSlide + 2) % services.length],
+  ];
+
   return (
-    <div id="services" className="our-services section">
-      <div className="services-right-dec">
-        <img src="assets/images/services-right-dec.png" alt="" />
-      </div>
-      <div className="container">
-        <div className="services-left-dec">
-          <img src="assets/images/services-left-dec.png" alt="" />
-        </div>
-        <div className="row">
-          <div className="col-lg-6 offset-lg-3">
-            <div className="section-heading">
-              <h2>
-                We <em>Provide</em> The Best Service With <span>Our Tools</span>
-              </h2>
-              <span>Our Services</span>
+    <div id="services" className="services-container">
+      <h2 className="services-heading">OUR SERVICES</h2>
+      <p className="services-subheading">
+        We <span className="highlight-blue">Provide</span> The Best Service{" "}
+        <br />
+        With <span className="highlight-red">Our Tools</span>
+      </p>
+      <div className="services-cards">
+        {visibleServices.map((service, index) => (
+          <div className="service-card" key={index}>
+            <div className="service-icon">
+              <img src={service.icon} alt={service.alt} />
             </div>
+            <h3>{service.title}</h3>
+            <p>{service.description}</p>
           </div>
-        </div>
-        <div className="row">
-          <div className="col-lg-12">
-            <div className="owl-carousel owl-services">
-              {[
-                {
-                  title: "Learn More about our Guidelines",
-                  icon: "assets/images/service-icon-01.png",
-                  text: "Feel free to use this template for your business",
-                },
-                {
-                  title: "Custom Web Development Solutions",
-                  icon: "assets/images/service-icon-03.png",
-                  text: "Tailored web solutions to meet your business needs.",
-                },
-                {
-                  title: "24/7 Customer Support",
-                  icon: "assets/images/service-icon-04.png",
-                  text: "Reliable support whenever you need assistance.",
-                },
-                {
-                  title: "SEO Optimization Services",
-                  icon: "assets/images/service-icon-05.png",
-                  text: "Increase your website's visibility with expert SEO strategies.",
-                },
-                {
-                  title: "Mobile App Development",
-                  icon: "assets/images/service-icon-06.png",
-                  text: "Create intuitive and powerful mobile apps for your business.",
-                },
-                {
-                  title: "Cloud Hosting Solutions",
-                  icon: "assets/images/service-icon-07.png",
-                  text: "Secure and scalable cloud hosting for your business.",
-                },
-                {
-                  title: "E-Commerce Development",
-                  icon: "assets/images/service-icon-08.png",
-                  text: "Build a strong online presence with a customized e-commerce platform.",
-                },
-                {
-                  title: "UI/UX Design Expertise",
-                  icon: "assets/images/service-icon-09.png",
-                  text: "Design user-friendly interfaces and engaging user experiences.",
-                },
-                {
-                  title: "Digital Marketing Campaigns",
-                  icon: "assets/images/service-icon-10.png",
-                  text: "Boost your business with targeted digital marketing strategies.",
-                },
-                // Add all other items here...
-              ].map((item, index) => (
-                <div className="item" key={index}>
-                  <h4>{item.title}</h4>
-                  <div className="icon">
-                    <img src={item.icon} alt="" />
-                  </div>
-                  <p>{item.text}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );

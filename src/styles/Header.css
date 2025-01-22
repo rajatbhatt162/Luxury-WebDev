@@ -10,6 +10,7 @@
 .header__logo {
   display: flex;
   align-items: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 1.5rem;
   color: #ff6b6b;
 }

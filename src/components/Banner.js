@@ -1,25 +1,31 @@
-
 import React from "react";
 import "../styles/Banner.css";
 
 const Banner = () => {
-  // const phoneNumber = "8126816455";
+  const phoneNumber = "8126816455";
+
+  const handleCall = () => {
+    window.location.href = `tel:${phoneNumber}`;
+  };
 
   return (
     <section id="home" className="banner">
       <div className="banner__content">
-        <p className="banner__subtitle">Website Designing</p>
+        <p className="banner__subtitle">Welcome to Luxury WebDev</p>
         <h1 className="banner__title">
-          Get the <span>Custom Website</span> for your Business
+          Let’s Work Together <span>Take your business to the next level </span>
+          with a website that stands out
         </h1>
         <p className="banner__note">
-          You are NOT allowed to redistribute this template ZIP file on any Free CSS collection websites. Contact us for more info. Thank you.
+          At Luxury WebDev, we design websites that make a strong impression.
+          Whether you need a simple and professional static website, an advanced
+          dynamic platform, or a website that works perfectly on any device,
+          we’re here to help.
         </p>
         <div className="banner__actions">
-          <button className="banner__btn">Our Services</button>
-          {/* <a href={`tel:${phoneNumber}`} className="banner__phone">
-            {phoneNumber}
-          </a> */}
+          <button onClick={handleCall} className="banner__btn">
+            Call Us Now
+          </button>
         </div>
       </div>
       <div className="banner__image">

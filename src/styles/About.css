@@ -1,7 +1,7 @@
 .about-section {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; 
   padding: 50px;
   background-color: #f9f9f9;
 }
@@ -13,9 +13,8 @@
 }
 
 .about-image img {
-  border-radius: 20px;
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -63,4 +62,40 @@
 .stat-item p {
   font-size: 0.9rem;
   color: #666;
+}
+
+/* Responsive Design for Mobile */
+@media screen and (max-width: 768px) {
+  .about-container {
+    flex-direction: column; /* Stack elements vertically */
+    text-align: center; /* Center-align text and content */
+  }
+
+  .about-image {
+    order: 1; /* Place the image first */
+    width: 100%; /* Full width */
+  }
+
+  .about-content {
+    order: 2; /* Place the text content below the image */
+    width: 100%; /* Full width */
+  }
+
+  .about-stats {
+    order: 3; /* Place stats below the text content */
+    flex-direction: column; /* Stack stats vertically */
+  }
+
+  .stat-item {
+    flex: 1 1 auto; /* Let stats take full width */
+    margin-bottom: 20px;
+  }
+
+  .about-content h1 {
+    font-size: 2rem; /* Slightly smaller headings for mobile */
+  }
+
+  .stat-number {
+    font-size: 1.5rem; /* Adjust stat number size */
+  }
 }

@@ -13,27 +13,38 @@ const About = () => {
         </div>
         <div className="about-content">
           <h1>
-            Grow Your Website With Our <span className="highlight">SEO Tools</span> & <span className="highlight">Project Management</span>
+            We Work With{" "}
+            <span className="highlight">Small and Medium Businesses</span> &{" "}
+            <span className="highlight">Online Stores </span>
+            <span className="highlight">Personal Portfolios </span>
+            <span className="highlight">Blogs </span>
+            <span className="highlight">Startups </span>
           </h1>
           <p>
-            You can browse free HTML templates on Too CSS website. Visit the
-            website and explore the latest website templates for your projects.
+            We create exceptional static, dynamic, and responsive websites
+            tailored to your business needs. With modern designs, optimized
+            performance, SEO-friendly structure, and dedicated support, we
+            ensure your website stands out and delivers a seamless user
+            experience across all devices.
           </p>
           <div className="about-stats">
             <div className="stat-item">
-              <span className="stat-number">320</span>
-              <h3>SEO Projects</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur.</p>
+              <span className="stat-number">11</span>
+              <h3>Experience</h3>
+              <p>We Have Team Of Full Stack WebDevlopers</p>
             </div>
             <div className="stat-item">
-              <span className="stat-number">640</span>
+              <span className="stat-number">100+</span>
               <h3>Websites</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur.</p>
+              <p>Dynamic and Static Websites.</p>
             </div>
             <div className="stat-item">
-              <span className="stat-number">120</span>
+              <span className="stat-number">100+</span>
               <h3>Satisfied Clients</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur.</p>
+              <p>
+                Our websites are optimized for speed, ensuring smooth user
+                experiences.
+              </p>
             </div>
           </div>
         </div>
