@@ -1,52 +1,44 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/Portfolio.css";
 
 const Portfolio = () => {
+  const images = [
+    "/images/portfolio-01.jpg",
+    "/images/portfolio-02.jpg",
+    "/images/portfolio-03.jpg",
+    "/images/portfolio-04.jpg",
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000); // Change image every 3 seconds
+    return () => clearInterval(interval);
+  }, [images.length]);
+
+  // Determine the visible images (3 at a time)
+  const getVisibleImages = () => {
+    let visibleImages = [];
+    for (let i = 0; i < 3; i++) {
+      visibleImages.push(images[(currentIndex + i) % images.length]);
+    }
+    return visibleImages;
+  };
+
   return (
-    <div id="portfolio" className="our-portfolio section">
-      <div className="portfolio-left-dec">
-        <img src="assets/images/portfolio-left-dec.png" alt="" />
-      </div>
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-6 offset-lg-3">
-            <div className="section-heading">
-              <h2>
-                Our Recent <em>Projects</em> &amp; Case Studies <span>for Clients</span>
-              </h2>
-              <span>Our Portfolio</span>
-            </div>
+    <div className="portfolio">
+      <h2>
+        Our Recent <span>Projects</span> & Case Studies <span>For Clients</span>
+      </h2>
+      <p className="portfolio-subtitle">OUR PORTFOLIO</p>
+      <div className="slider">
+        {getVisibleImages().map((image, index) => (
+          <div key={index} className="slide">
+            <img src={image} alt={`Project ${index + 1}`} />
           </div>
-        </div>
-      </div>
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col-lg-12">
-            <div className="owl-carousel owl-portfolio">
-              {/* Map through project data */}
-              {[
-                {
-                  image: "assets/images/portfolio-01.jpg",
-                  title: "First Project",
-                  category: "Plot Listing",
-                },
-                // Add other projects here
-              ].map((project, index) => (
-                <div className="item" key={index}>
-                  <div className="thumb">
-                    <img src={project.image} alt="" />
-                    <div className="hover-effect">
-                      <div className="inner-content">
-                        <h4>{project.title}</h4>
-                        <span>{project.category}</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );

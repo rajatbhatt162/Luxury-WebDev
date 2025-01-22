@@ -31,9 +31,44 @@ const Services = () => {
                   text: "Feel free to use this template for your business",
                 },
                 {
-                  title: "Develop The Best Strategy for Business",
-                  icon: "assets/images/service-icon-02.png",
-                  text: "Get to know more about the topic in details",
+                  title: "Custom Web Development Solutions",
+                  icon: "assets/images/service-icon-03.png",
+                  text: "Tailored web solutions to meet your business needs.",
+                },
+                {
+                  title: "24/7 Customer Support",
+                  icon: "assets/images/service-icon-04.png",
+                  text: "Reliable support whenever you need assistance.",
+                },
+                {
+                  title: "SEO Optimization Services",
+                  icon: "assets/images/service-icon-05.png",
+                  text: "Increase your website's visibility with expert SEO strategies.",
+                },
+                {
+                  title: "Mobile App Development",
+                  icon: "assets/images/service-icon-06.png",
+                  text: "Create intuitive and powerful mobile apps for your business.",
+                },
+                {
+                  title: "Cloud Hosting Solutions",
+                  icon: "assets/images/service-icon-07.png",
+                  text: "Secure and scalable cloud hosting for your business.",
+                },
+                {
+                  title: "E-Commerce Development",
+                  icon: "assets/images/service-icon-08.png",
+                  text: "Build a strong online presence with a customized e-commerce platform.",
+                },
+                {
+                  title: "UI/UX Design Expertise",
+                  icon: "assets/images/service-icon-09.png",
+                  text: "Design user-friendly interfaces and engaging user experiences.",
+                },
+                {
+                  title: "Digital Marketing Campaigns",
+                  icon: "assets/images/service-icon-10.png",
+                  text: "Boost your business with targeted digital marketing strategies.",
                 },
                 // Add all other items here...
               ].map((item, index) => (

@@ -1,16 +1,19 @@
-import React from 'react';
-import '../styles/Header.css';  // Correct path to CSS file
+import React, { useState } from 'react';
+import '../styles/Header.css';
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <header className="header-area header-sticky">
       <div className="container">
         <nav className="main-nav">
           <h1>Luxury WebDev</h1>
-          {/* <a href="#top" className="logo">
-            <img src="assets/images/logo.png" alt="Logo" />
-          </a> */}
-          <ul className="nav">
+          <ul className={`nav ${menuOpen ? 'active' : ''}`}>
             <li><a href="#top" className="active">Home</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#about">About</a></li>
@@ -23,8 +26,11 @@ const Header = () => {
               </div>
             </li>
           </ul>
-          <div className="menu-trigger">
-            <span>Menu</span>
+          {/* Hamburger menu icon */}
+          <div className="menu-trigger" onClick={toggleMenu}>
+            <span className="menu-icon"></span>
+            <span className="menu-icon"></span>
+            <span className="menu-icon"></span>
           </div>
         </nav>
       </div>

@@ -5,7 +5,6 @@ import "./App.css";
 import Services from "./components/Services";
 import About from "./components/About";
 import Portfolio from "./components/Portfolio";
-import Pricing from "./components/Pricing";
 import Subscribe from "./components/Subscribe";
 import Contact from './components/Contact';
 
@@ -18,7 +17,6 @@ const App = () => {
       <Services />
       <About />
       <Portfolio />
-      <Pricing />
       <Subscribe />
       {/* <VideoSection /> */}
       <Contact />

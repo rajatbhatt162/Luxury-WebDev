@@ -1,48 +1,116 @@
-.services {
-    padding: 50px 0;
-    background: #f9f9f9;
+/* Services Section */
+.our-services {
+  padding: 100px 0;
+  background-color: #f8f9fa;
+  position: relative;
+}
+
+.services-right-dec img,
+.services-left-dec img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.services-right-dec img {
+  right: 0;
+}
+
+.services-left-dec img {
+  left: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+.section-heading h2 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.section-heading h2 em {
+  font-style: normal;
+  color: #f39c12;
+}
+
+.section-heading span {
+  display: block;
+  font-size: 18px;
+  text-align: center;
+  color: #999;
+  margin-top: 5px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.owl-carousel {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.owl-carousel .item {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+  width: calc(33% - 20px);
+  box-sizing: border-box;
+  transition: transform 0.3s ease-in-out;
+}
+
+.owl-carousel .item:hover {
+  transform: translateY(-10px);
+}
+
+.owl-carousel .item h4 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.owl-carousel .item .icon {
+  margin-bottom: 20px;
+}
+
+.owl-carousel .item .icon img {
+  max-width: 50px;
+}
+
+.owl-carousel .item p {
+  font-size: 16px;
+  color: #777;
+  line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+  .owl-carousel .item {
+    width: calc(50% - 20px);
   }
-  
-  .services h2 {
-    font-size: 32px;
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .owl-carousel .item {
+    width: 100%;
   }
-  
-  .services .services-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 30px;
+
+  .section-heading h2 {
+    font-size: 30px;
   }
-  
-  .services .service-item {
-    background: #ffffff;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    width: 280px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  .section-heading span {
+    font-size: 16px;
   }
-  
-  .services .service-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  }
-  
-  .services .service-item h4 {
-    font-size: 20px;
-    color: #007bff;
-    margin-bottom: 10px;
-  }
-  
-  .services .service-item p {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 15px;
-  }
-  
+}
