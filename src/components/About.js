@@ -29,7 +29,7 @@ const About = () => {
           </p>
           <div className="about-stats">
             <div className="stat-item">
-              <span className="stat-number">11</span>
+              <span className="stat-number">11+</span>
               <h3>Experience</h3>
               <p>We Have Team Of Full Stack WebDevlopers</p>
             </div>
