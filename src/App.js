@@ -5,7 +5,7 @@ import "./App.css";
 import Services from "./components/Services";
 import About from "./components/About";
 import Portfolio from "./components/Portfolio";
-import Subscribe from "./components/Subscribe";
+import Footer from "./components/Footer";
 import Contact from './components/Contact';
 
 
@@ -17,9 +17,8 @@ const App = () => {
       <Services />
       <About />
       <Portfolio />
-      <Subscribe />
-      {/* <VideoSection /> */}
       <Contact />
+      <Footer/>
     </div>
   );
 };

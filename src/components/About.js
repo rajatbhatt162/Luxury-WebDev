@@ -7,7 +7,7 @@ const About = () => {
       <div className="about-container">
         <div className="about-image">
           <img
-            src="https://via.placeholder.com/600x400" // Replace with your image URL
+            src="\images\about-left-image.png" // Replace with your image URL
             alt="Two people working on a laptop"
           />
         </div>

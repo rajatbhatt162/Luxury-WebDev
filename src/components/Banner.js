@@ -1,42 +1,31 @@
+
 import React from "react";
-import "../styles/Banner.css"; // Ensure the CSS file path is correct
+import "../styles/Banner.css";
 
 const Banner = () => {
-  const phoneNumber = "+91 8126816455"; // You can dynamically update this if needed
+  // const phoneNumber = "8126816455";
 
   return (
-    <div className="main-banner" id="top">
-      <div className="col-lg-6">
-        <div className="header-text">
-          <h6>Welcome to Luxury WebDev</h6>
-          <h2>
-            Get your <em>Static or Dynamic website</em>
-          </h2>
-          <p>
-            Transform your online presence with our professional and responsive
-            website design solutions, tailored for your needs.
-          </p>
-          <div className="down-buttons">
-            <a href="#contact" className="main-blue-button-hover">
-              Message us Now
-            </a>
-            <a href={`tel:${phoneNumber}`} className="call-button">
-              <i className="fa fa-phone"></i> {phoneNumber}
-            </a>
-          </div>
+    <section className="banner">
+      <div className="banner__content">
+        <p className="banner__subtitle">Website Designing</p>
+        <h1 className="banner__title">
+          Get the <span>Custom Website</span> for your Business
+        </h1>
+        <p className="banner__note">
+          You are NOT allowed to redistribute this template ZIP file on any Free CSS collection websites. Contact us for more info. Thank you.
+        </p>
+        <div className="banner__actions">
+          <button className="banner__btn">Our Services</button>
+          {/* <a href={`tel:${phoneNumber}`} className="banner__phone">
+            {phoneNumber}
+          </a> */}
         </div>
       </div>
-      <div className="col-lg-6">
-        <div className="banner-image">
-          <img
-            src="/images/Banner.png"
-            alt="Digital Solutions Banner for Luxury WebDev"
-            loading="lazy" // Lazy load the image
-          />
-        </div>
+      <div className="banner__image">
+        <img src="\images\Banner.png" alt="Office" />
       </div>
-    </div>
-    
+    </section>
   );
 };
 
