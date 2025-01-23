@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <div id="contact" className="contact-container">
       <h2 className="contact-title">
-        Get in Touch With Us Through the <span>Provided Details</span> Below
+        Get in touch with us through the <span>Provided Details</span> below
       </h2>
 
       <div className="contact-content">
@@ -17,10 +17,10 @@ const Contact = () => {
           loading="lazy"
         ></iframe>
         <form className="contact-form">
-          <input type="text" name="name" placeholder="Name" required />
-          <input type="text" name="surname" placeholder="Surname" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <input type="url" name="website" placeholder="Your Website URL" />
+          <input type="text" name="name" placeholder="First Name" required />
+          <input type="text" name="surname" placeholder="Last Name" required />
+          <input type="email" name="email" placeholder="Your Mobile Number" required />
+          <input type="url" name="website" placeholder="City" />
           <button type="submit">Submit Request</button>
         </form>
       </div>

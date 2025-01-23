@@ -2,29 +2,28 @@ import React, { useState, useEffect } from "react";
 import "../styles/Portfolio.css";
 
 const Portfolio = () => {
-  const images = [
-    "/images/portfolio-01.jpg",
-    "/images/portfolio-02.jpg",
-    "/images/portfolio-03.jpg",
-    "/images/portfolio-04.jpg",
+  const videos = [
+    "/videos/portfolio1.MP4",
+    "/videos/portfolio2.MP4",
+    "/videos/portfolio3.MP4",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); // Change image every 3 seconds
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % videos.length);
+    }, 9000); // Change video every 3 seconds
     return () => clearInterval(interval);
-  }, [images.length]);
+  }, [videos.length]);
 
-  // Determine the visible images (3 at a time)
-  const getVisibleImages = () => {
-    let visibleImages = [];
+  // Determine the visible videos (3 at a time)
+  const getVisibleVideos = () => {
+    let visibleVideos = [];
     for (let i = 0; i < 3; i++) {
-      visibleImages.push(images[(currentIndex + i) % images.length]);
+      visibleVideos.push(videos[(currentIndex + i) % videos.length]);
     }
-    return visibleImages;
+    return visibleVideos;
   };
 
   return (
@@ -34,9 +33,9 @@ const Portfolio = () => {
       </h2>
       <p className="portfolio-subtitle">OUR PORTFOLIO</p>
       <div className="slider">
-        {getVisibleImages().map((image, index) => (
+        {getVisibleVideos().map((video, index) => (
           <div key={index} className="slide">
-            <img src={image} alt={`Project ${index + 1}`} />
+            <video src={video} autoPlay muted loop /> 
           </div>
         ))}
       </div>
