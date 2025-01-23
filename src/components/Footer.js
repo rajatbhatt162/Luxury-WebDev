@@ -33,9 +33,9 @@ const Footer = () => {
           <span>
             <a
               href="#"
-              onClick={(e) => handleLinkClick("info@company.com", "email")}
+              onClick={(e) => handleLinkClick("webdevluxury@gmail.com", "email")}
             >
-                info@company.com
+                webdevluxury@gmail.com
             </a>
           </span>
         </p>
